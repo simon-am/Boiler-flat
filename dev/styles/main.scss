@@ -1,18 +1,22 @@
-         /*                                   ,,                             ,,  
-       `7MM                     .p67MM      `7MM                           `7MM  
-         MM                     o   MM        MM                             MM  
- ,p6"bo  MMpMMMb.  .gP"Ya   ,p6"bo  MM  ,MP'  MM   ,6"Yb.  `7MMpMMMb.   ,M""bMM  
-6M'  OO  MM    MM ,M'   Yb 6M'  OO  MM ;Y     MM  8)   MM    MM    MM ,AP    MM  
-8M       MM    MM 8M"""""" 8M       MM;Mm     MM   ,pm9MM    MM    MM 8MI    MM  
-YM.    , MM    MM YM.    , YM.    , MM `Mb.   MM  8M   MM    MM    MM `Mb    MM  
- YMbmd'.JMML  JMML.`Mbmmd'  YMbmd'.JMML. YA..JMML.`Moo9^Yo..JMML  JMML.`Wbmd"M*/
-                                                                                 
+   /*(|)--(|)-.
+   \_   ..   _/   I'M THE CSSSSSS SSSSNAKE
+     \______/       
+       V  V                                  ____
+       `.^^`.                               /^,--`
+         \^^^\                             (^^\
+         |^^^|                  _,-._       \^^\
+        (^^^^\      __      _,-'^^^^^`.    _,'^^)
+         \^^^^`._,-'^^`-._.'^^^^__^^^^ `--'^^^_/
+          \^^^^^ ^^^_^^^^^^^_,-'  `.^^^^^^^^_/ 
+           `.____,-' `-.__.'        `-.___*/
+
+             
 // Bourbon
 @import "bourbon";
 
 // Base
+@import "base/reset";
 @import "base/variables";
-@import "base/normalise";
 @import "base/defaults";
 @import "base/fonts";
 @import "base/animations";
@@ -20,19 +24,9 @@ YM.    , MM    MM YM.    , YM.    , MM `Mb.   MM  8M   MM    MM    MM `Mb    MM
 
 // Elements
 @import "elements/header";
-@import "elements/footer";
-@import "elements/navigation";
-@import "elements/gallery";
 
 // Pages
-@import "pages/home";
-@import "pages/timeline";
-@import "pages/contact";
-@import "pages/clients";
-@import "pages/approach";
-@import "pages/work";
-@import "pages/work-modules";
-@import "pages/join";
+@import "pages/index";
 
 
 

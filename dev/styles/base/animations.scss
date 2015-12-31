@@ -7,7 +7,7 @@
     100% { opacity: 1; }
 }
 
-.fade{
+.fade {
     @include animation-name(fade-ani);
     @include animation-duration(.6s);
     @include animation-delay(0ms);
@@ -21,7 +21,7 @@
     100% { @include transform(translateY(0px));  opacity:1; }
 }
 
-.fade-up{
+.fade-up {
     @include animation-name(fade-up);
     @include animation-duration(2s);
     @include animation-delay(0ms);
@@ -30,7 +30,7 @@
     @include animation-fill-mode(backwards);
 }
 
-.fade-up-delay-1{
+.fade-up-delay-1 {
     @include animation-name(fade-up);
     @include animation-duration(2s);
     @include animation-delay(300ms);
@@ -39,7 +39,7 @@
     @include animation-fill-mode(backwards);
 }
 
-.fade-up-delay-2{
+.fade-up-delay-2 {
     @include animation-name(fade-up);
     @include animation-duration(2s);
     @include animation-delay(600ms);
@@ -48,7 +48,7 @@
     @include animation-fill-mode(backwards);
 }
 
-.fade-up-delay-3{
+.fade-up-delay-3 {
     @include animation-name(fade-up);
     @include animation-duration(2s);
     @include animation-delay(900ms);

@@ -1,73 +1,36 @@
 // Header ===================
 
-.header-section{
-	height: 600px;  
-	position: fixed;
+header {
+	position: relative;
+	width: 100%;
 	top: 0;
-	-webkit-backface-visibility: hidden;
+	height: 90px;
+	z-index: 100;
 }
 
-.header-section_fake{
-	height: 600px;
-}
-
-.header-content{
-	@extend .absolute-center;
-	height: 200px;
-	color: white;
-	-webkit-font-smoothing: antialiased;
-
+.header--content {
+	position: relative;
+	width: 100%;
 	max-width: $max-width;
-	padding: 0 100px;
-
-	
-	@media #{$tabletp} {	
-		padding: 0px 40px;
-	}
-	@media #{$phonel} {	
-		padding: 0px 20px;
-	}
+	margin: 0 auto;
 }
 
-.header--name{
-	margin-bottom: 33px;
-	position: relative;
-	z-index: 10;
-}
-
-.header--title{
-	max-width: 600px;
-	position: relative;
-	z-index: 10;
-}
-
-
-@include keyframes(header-line-ani) {
-    0%   { width: 0; }
-    100% { width: 50%; }
-}
-
-.header--line{
-	@extend .line-blob;
+.header--logo {
 	position: absolute;
-	top: 10px;
-	width: 50%;
-	left: -50%;
-	margin-left: 80px;
-
-	@media #{$tabletp} {	
-		margin-left: 30px;
-	}
-
-	@media #{$phonel} {	
-		margin-left: 10px;
-	}
-
-	@include animation-name(header-line-ani);
-    @include animation-duration(1000ms);
-    @include animation-delay(0ms);
-    @include animation-timing-function(cubic-bezier(0.19, 1, 0.22, 1));
-    @include animation-iteration-count(once);
-    @include animation-fill-mode(backwards);
+	width: 150px;
+	margin-top: 33px;
+	padding-left: 30px;
 }
 
+// right menu
+
+.header--menu {
+	position: absolute;
+	right: 40px;
+	margin-top: 43px;
+	li {
+		float: left;
+		margin-left: 25px;
+		list-style: none;
+	}
+}

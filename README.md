@@ -1,8 +1,8 @@
 # Boiler-flat
 
-Replicates build folder structure for dynamic products.
-Styles and scripts builds in corresponding folders.
+Replicates build folder structure for dynamic products. <br>
+Styles and scripts build in corresponding folders. <br>
 
 #### Specs
-Grunt
+Grunt <br>
 SASS + Bourbon
