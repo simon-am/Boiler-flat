@@ -1,0 +1,43 @@
+// Colours ==============
+
+// blacks
+$black: #000000;
+$off-black: #191919;
+
+//whites
+$white: #ffffff;
+$off-white: #F7F7F7;
+$brown-white: #e8eae5;
+
+//things
+$text: #181818;
+$pink: #f7314c;
+
+
+// Sizes ================
+$max-width: 1440px;
+$menu-width: 380px;
+
+
+// Responsive ===========
+$phone: "only screen and (max-width: 400px)";
+$phonel: "only screen and (max-width: 580px)";
+$tabletp: "only screen and (max-width: 768px)";
+$tabletl: "only screen and (max-width: 1024px)";
+$laptop: "only screen and (max-width: 1240px)";
+$desktop: "only screen and (max-width: 1640px)";
+
+
+// Clips ================ 
+/*
+
+@media #{$phone} {	
+
+}
+
+@include transition(all 800ms cubic-bezier(0.19, 1, 0.22, 1));
+@include transform(translateX(50%)); 
+
+-webkit-font-smoothing: antialiased;
+
+*/

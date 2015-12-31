@@ -1,0 +1,202 @@
+// Defaults ================= 
+
+.hide {
+    display: none;
+}
+
+.no-js {
+    display: none;
+}
+
+.no-overflow { 
+    overflow: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.full {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.img_wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.image-full {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    &.focus-top{
+        background-position: top center;
+    }
+}
+
+.absolute-center {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+
+.absolute-h-center {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.absolute-v-center {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+
+// Parallax images
+
+.parallax-image-wrap{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.parallax-image{
+    width: 100%;
+    height: 140%;
+    top: -20%;
+    position: relative;
+    //@include transition(all 100ms ease)
+    //@include transition(all 1s cubic-bezier(0.19, 1, 0.22, 1));
+}
+
+// line-blob
+
+.line-blob{
+    height: 1px;
+    background: rgba(255,255,255,0.3);
+    &:after{
+        position: absolute;
+        content:"";
+        top: -1px;
+        right: -3px;
+        width: 3px;
+        height: 3px;
+        border-radius: 2px;
+        background: rgba(255,255,255,0.9);
+    }
+}
+
+.line-blob--black{
+    position: absolute;
+    background-color: #e5e5e5;
+    top: 10px;
+    width: 50%;
+    left: -50%;
+    height: 1px;
+    margin-left: 125px;
+
+    @media #{$tabletl} {    
+        margin-left: 25px;
+    }
+
+
+    &:after{
+        position: absolute;
+        content:"";
+        top: -1px;
+        right: -3px;
+        width: 3px;
+        height: 3px;
+        border-radius: 2px;
+        background: $off-black;
+    }
+
+
+
+    
+}
+
+
+// Clearfix
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+.clear {
+    clear: both;
+}
+
+// Stupid chrome being stupid
+
+.lag-fix{
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+// Helpers
+
+// adds hover when site is not touch & active/link when site is touch (touch class needs to be added to body)
+@mixin touchhover() {
+    body:not(.touch) &:hover {
+        @content;
+    }
+    body.touch &:active,
+    body.touch &:link {
+        @content;
+    }
+}
+
+//  add background image for both normal and retina
+@mixin at2x($image_name, $w: auto, $h: auto, $extention: '.png') {
+    background-image: url($image_name + $extention);
+    $x2img : $image_name + '@2x' + $extention;
+    background-size: $w $h;
+
+    @media all and (-webkit-min-device-pixel-ratio : 1.5) {
+        background-image: url($x2img);
+    }
+}
+

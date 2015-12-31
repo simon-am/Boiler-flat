@@ -1,0 +1,88 @@
+// Clients ======================
+
+.clients-header {
+	margin-top: 170px;
+	padding-bottom: 80px;
+	overflow: hidden;
+}
+
+.clients--line{
+	top: 10px;
+}
+
+.clients--leader {
+	margin-bottom: 32px;
+}
+
+.clients--title {
+	width: 66%;
+	float: left;
+	display: block;
+	margin-bottom: 85px;
+}
+
+.clients--intro {
+	width: 66%;
+	float: right;
+	display: block;
+}
+
+// Logos
+
+@include keyframes(fade-up-clients) {
+    0%   { @include transform(translateY(40px)); opacity:0; }
+    100% { @include transform(translateY(0px));  opacity:1; }
+}
+
+.client-logos {
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 100px;
+	position: relative;
+	li {
+		float: left;
+		width: 16.66%;
+		display: block;
+		@include animation-name(fade-up-clients);
+	    @include animation-duration(1.5s);
+	    @include animation-delay(1s);
+	    @include animation-timing-function(cubic-bezier(0.19, 1, 0.22, 1));
+	    @include animation-iteration-count(once);
+	    @include animation-fill-mode(backwards);
+
+	    &:nth-child(-n+30) {
+			@include animation-delay(2s);
+		}
+
+	    &:nth-child(-n+24) {
+			@include animation-delay(1.75s);
+		}
+
+	    &:nth-child(-n+18) {
+			@include animation-delay(1.5s);
+		}
+
+		&:nth-child(-n+12) {
+			@include animation-delay(1.25s);
+		}
+
+		&:nth-child(-n+6) {
+			@include animation-delay(1s);
+		}
+	}
+}
+
+.client-logo{ 
+	height: 60px;
+	margin: 25px auto;
+	width: 40%;
+	position: relative;
+	.img_wrapper{
+		@extend .absolute-center;
+		width: 100%;
+		img{
+			@extend .absolute-center;
+			width: 100%;
+		}
+	}
+}

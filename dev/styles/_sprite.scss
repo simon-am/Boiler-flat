@@ -1,0 +1,14 @@
+$icons: (
+      sprite: (width: 94px, height: 84px, pngPath: '../images/sprite.png', svgPath: '../images/sprite.svg'),
+    polygon: (width: 94px, height: 84px, backgroundX: 0px, backgroundY: 0px),
+);
+
+$sprite: map-get($icons, sprite);
+
+$polygon: map-get($icons, polygon);
+%icon-polygon {
+	background-image: url(map-get($sprite, svgPath));
+	background-position: map-get($polygon, backgroundX) map-get($polygon, backgroundY);
+	width: map-get($polygon, width);
+	height: map-get($polygon, height);
+}

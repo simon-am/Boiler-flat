@@ -1,0 +1,135 @@
+// Gallery ============
+
+
+@include keyframes(gallery-right-ani) {
+    0%   { @include transform(translateX(0%)); z-index: 40;}
+    99.9% { @include transform(translateX(120%)); z-index: 40; }
+    100% { @include transform(translateX(50%)); z-index: 1; }
+}
+
+@include keyframes(gallery-left-ani) {
+    0%   { @include transform(translateX(0%)); z-index: 40;}
+    99.9% { @include transform(translateX(-120%)); z-index: 40; }
+    100% { @include transform(translateX(-50%)); z-index: 1; }
+}
+
+
+.gallery{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	.image-full{
+		@include transition(all 1s cubic-bezier(.17,.68,.22,1));
+		-webkit-box-shadow: 0px 0px 300px -29px rgba(0,0,0,0.8);
+		-moz-box-shadow: 0px 0px 300px -29px rgba(0,0,0,0.8);
+		box-shadow: 0px 0px 300px -29px rgba(0,0,0,0.8);
+
+	}
+
+	&.hover-right{
+		.active {
+			@include transform(translateX(-5%)); 
+		}
+	}
+
+	&.hover-left{
+		.active {
+			@include transform(translateX(5%)); 
+		}
+	}
+
+	.active{
+		@include transform(translateX(0));
+		@include transition(all 1s cubic-bezier(.17,.68,.22,1));
+		z-index: 40;
+	}
+
+	.left{
+		@include transform(translateX(-50%));
+		z-index: 10;
+		@include transition(all 0s ease);
+	}
+
+	.right{
+		@include transform(translateX(50%));
+		z-index: 10;
+		@include transition(all 0s ease);
+	}
+}
+
+.moving-left{
+	@include animation-name(gallery-left-ani);
+	@include animation-duration(1.8s);
+	@include animation-timing-function(cubic-bezier(.17,.68,.22,1));
+	@include animation-iteration-count(once);
+	@include animation-fill-mode(backwards);
+}
+
+.moving-right{
+	@include animation-name(gallery-right-ani);
+	@include animation-duration(1.8s);
+	@include animation-timing-function(cubic-bezier(.17,.68,.22,1));
+	@include animation-iteration-count(once);
+	@include animation-fill-mode(backwards);
+}
+
+
+// Full image states
+
+
+
+// Arrows
+
+.hover-area{
+	position: absolute;
+	height: 100%;
+	width: 10%;
+	z-index: 50;
+	top: 0;
+	cursor: pointer;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 31px 57px;
+}
+
+.hover-area_right{
+	right: 0;
+	background-image:url('../images/gallery_right.png');
+}
+
+.hover-area_left{
+	left: 0;
+	background-image:url('../images/gallery_left.png');
+}	
+
+// Gallery location
+
+.gallery-location{
+	list-style: none;
+	position: absolute;
+	bottom: 30px;
+	width: 100%;
+	height: 10px;
+	text-align: center;
+	z-index: 50;
+
+	li{
+		width: 8px;
+		height: 8px;
+		border-radius: 4px;
+		border: 1px solid white;
+		display: inline-block;
+		margin: 0 4px;
+		cursor: pointer;
+		@include transition(all .2s ease);
+
+		&.active, &:hover{
+			background-color: white;
+		}
+	}
+}

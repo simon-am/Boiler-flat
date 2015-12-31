@@ -1,0 +1,184 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3133878, 2015-12-01T06:43:47-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3133878
+ * Licensed pageviews: 10,000
+ * 
+ * © 2015 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+//@import url("//hello.myfonts.net/count/2fd1b6");
+
+@font-face {
+    font-family: 'Neva-Regular'; src: url('../fonts/2FD1B6_0_0.eot');src: url('../fonts/2FD1B6_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2FD1B6_0_0.woff2') format('woff2'),url('../fonts/2FD1B6_0_0.woff') format('woff'),url('../fonts/2FD1B6_0_0.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal; 
+}
+
+@font-face {    
+    font-family: 'Neva-Italic';
+    src: url('../fonts/2FD1B6_1_0.eot'); src: url('../fonts/2FD1B6_1_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2FD1B6_1_0.woff2') format('woff2'),url('../fonts/2FD1B6_1_0.woff') format('woff'),url('../fonts/2FD1B6_1_0.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic; 
+}
+
+@font-face {    
+    font-family: 'ProbaPro-Regular';
+    src: url('../fonts/2FD1B6_3_0.eot');src: url('../fonts/2FD1B6_3_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2FD1B6_3_0.woff2') format('woff2'),url('../fonts/2FD1B6_3_0.woff') format('woff'),url('../fonts/2FD1B6_3_0.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal; 
+}
+
+@font-face {    
+    font-family: 'ProbaPro-Italic';
+    src: url('../fonts/2FD1B6_2_0.eot');src: url('../fonts/2FD1B6_2_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2FD1B6_2_0.woff2') format('woff2'),url('../fonts/2FD1B6_2_0.woff') format('woff'),url('../fonts/2FD1B6_2_0.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic; 
+}
+
+
+ 
+
+
+// Type ===================
+
+h1 {
+    font-family: 'Neva-Regular', serif;
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: normal;
+    font-style: normal;
+    @include transition(font-size 0ms linear);
+    @media #{$phonel} {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    em{
+        font-family: 'Neva-Italic';
+        font-weight: normal;
+        font-style: italic; 
+    }
+}
+
+h2 {
+    font-family: 'Neva-Regular', serif;
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: normal;
+    font-style: normal;
+    @include transition(font-size 0ms linear);
+    @media #{$phonel} {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    em{
+        font-family: 'Neva-Italic';
+        font-weight: normal;
+        font-style: italic; 
+    }
+}
+
+h3 {
+    font-family: 'Neva-Regular', serif;
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: normal;
+    font-style: normal;
+    @include transition(font-size 0ms linear);
+    @media #{$phonel} {
+        font-size: 24px;
+        line-height: 34px;
+    }
+
+    em{
+        font-family: 'Neva-Italic';
+        font-weight: normal;
+        font-style: italic; 
+    }
+}
+
+h5{
+    font-family: 'ProbaPro-Regular', serif;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    @include transition(font-size 0ms linear);
+
+    em{
+        font-family: 'ProbaPro-Italic';
+        font-weight: normal;
+        font-style: italic; 
+    }
+}
+
+p {
+	font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 20px;
+    @include transition(font-size 0ms linear);
+    @media #{$phonel} {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.text-underline {
+    text-decoration: underline;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.ni {
+    font-family: 'Neva-Italic', serif;
+    font-weight: normal;
+    font-style: italic; 
+}
+
+
+// Placeholder style
+::-webkit-input-placeholder {
+	color: black;
+}
+
+:-moz-placeholder {
+	color: black;  
+}
+
+::-moz-placeholder { 
+	color: black;  
+}
+
+:-ms-input-placeholder {  
+	color: black;  
+}
+
+// Highlight colour
+
+::selection {
+	background: $off-black;
+	color: white;
+}
+
+::-moz-selection {
+	background: $off-black;
+	color: white;
+}

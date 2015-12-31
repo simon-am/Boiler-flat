@@ -1,0 +1,163 @@
+// Body ======================
+
+body, html {
+	height: 100%;
+}
+
+body {
+	font-size: 13px;
+    line-height: 14px;
+    font-family: 'ProbaPro-Regular', sans-serif;
+    font-weight: normal;
+	min-width: 100%;
+	color: $text;
+	background-color: $off-black;
+}
+
+
+#react-container {
+	position: relative;
+    overflow: hidden;
+}
+
+.react-body{
+	position: relative;
+    height: 100%;
+
+	&.navigation-active{
+		overflow: hidden;
+
+	}
+}
+
+.react-block {
+	width: 100%;
+	position: relative;
+}
+
+
+//
+//  To get over fixed elements jumping with transforms they have to be moved separately. 
+//  Just keep track of fixed elements and place them below. 
+//
+
+.page-content {    
+	max-width: 100%;
+    overflow: hidden;
+    width: 100%;
+	position: relative;
+
+
+	// adds animation for elements that don't have it, kept it here so it's manageable.
+	section, .intro-statements_nav {
+		@include transition(all 1s cubic-bezier(0.19, 1, 0.22, 1));
+	}
+
+	// stops easing for parallax
+	.intro-section {
+		@include transition(all 0s ease);
+	}
+
+	&.navigation-active {
+		section, .intro-videos, footer, .intro-statements_nav, .work-list{
+			@include transform(translateX(($menu-width)-2px));
+			@include transition(all 1s cubic-bezier(0.19, 1, 0.22, 1));
+		}
+
+		// Already translated
+		.work-inactive {
+			@include transform(translateX(($menu-width)*2));
+		}
+
+		// .work-full .work-list {
+		// 	display: none;
+		// }
+
+		// Overlay
+		&::after {
+			opacity: 1;
+		}
+	}
+
+	&::after {
+		content:"";
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0,0.4);
+		opacity: 0;
+		z-index: 200;
+		//visibility: hidden;
+		pointer-events: none;
+		@include transition(all 200ms linear);
+	}
+
+}
+
+
+// sections 
+
+section {
+	width: 100%;
+	position: relative;
+	display: block;
+	background-color: $white;
+}
+
+.section-content {
+	width: 100%;
+	max-width: $max-width;
+	padding: 0 100px;
+	margin: 0 auto;
+	position: relative;
+	@media #{$tabletl} {	
+		padding: 0 40px;
+	}
+	@media #{$tabletp} {	
+		padding: 0 10px;
+	}	
+}
+
+.section-content-text {
+	width: 100%;
+	max-width: $max-width;
+	padding: 0 150px;
+	margin: 0 auto;
+	position: relative;
+	@media #{$tabletl} {	
+		padding: 0 40px;
+	}
+	// @media #{$tabletp} {	
+	// 	padding: 0 10px;
+	// }
+	
+}
+
+.section-title{
+	width: 100%;
+	padding: 90px 0 60px 0;
+	text-align: center;
+	@media #{$phonel} {	
+		padding: 60px 0 30px 0;
+	}
+}
+
+.half-content {
+	width: 50%;
+	float: left;
+	display: block;
+	height: 100%;
+	position: relative;
+
+	@media #{$phonel} {	
+		width: 100%;
+	}
+}
+
+
+// Columns 
+
+
+

@@ -1,0 +1,195 @@
+// Work ======================
+
+.work-full {
+	.work-list{
+		@include transform(translateX(-100%));
+		@media #{$phonel} {	
+			display: none;
+		}
+	}
+	.work{
+		position: relative;
+		@media #{$phonel} {	
+			display: block;
+		}
+	}
+	.work-header{
+		.header-content{
+			display: block;
+		}
+		&.active{
+			@include animation-name(work-ani);
+		    @include animation-duration(0s);
+		    @include animation-delay(0ms);
+		    @include animation-timing-function(ease);
+		    @include animation-iteration-count(once);
+		    @include animation-fill-mode(backwards);
+		}
+	}
+}
+
+
+
+.work-bottom{
+	.work-list{
+		@include transform(translateX(0%));
+	}
+	.work{
+		position: relative;
+		@include transform(translateX(30%));	
+	}
+}
+
+
+.work-list {
+	position: fixed; 
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 50%;
+	z-index: 50;
+	
+	overflow-x: hidden;
+	overflow-y: auto;
+	
+	background: white;
+	@include transition(all 1s cubic-bezier(0.19, 1, 0.22, 1));
+
+	@media #{$phonel} {	
+		position: relative;
+		width: 100%;
+	}
+}
+
+.work-list--works {
+	padding-top: 200px;
+	list-style: none;
+    position: relative;
+    overflow: scroll;
+    &::-webkit-scrollbar { width: 0 !important }
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    
+	li {
+		color: #b2b2b2;
+		position: relative;
+		padding: 10px 0 10px 20%;
+		cursor: pointer;
+		&:hover, &.active {
+			color: $off-black;
+			.work-list--line{
+				width: 22%;
+			}
+			h5{
+				@include transform(translateX(3%)); 
+			}
+		}
+
+		h5{
+			@include transition(all 800ms cubic-bezier(0.19, 1, 0.22, 1));
+		}
+	}
+	
+}
+
+.work-list--line {
+	position: absolute;
+    background-color: #e5e5e5;
+    top: 20px;
+    width: 0%;
+    left: 0;
+    height: 1px;
+    margin-left: -22px;
+    @include transition(all 800ms cubic-bezier(0.19, 1, 0.22, 1));
+
+    &:after{
+        position: absolute;
+        content:"";
+        top: -1px;
+        right: -3px;
+        width: 3px;
+        height: 3px;
+        border-radius: 2px;
+        background: $off-black;
+    }
+
+
+}
+
+
+// Right side
+
+.work {
+	width: 100%;
+	position: fixed;
+	min-height: 100%;
+	//@include transform(translateX(0%));
+	@include transition(all 1s cubic-bezier(0.19, 1, 0.22, 1));
+	@media #{$phonel} {	
+		display: none;
+		position: relative;
+	}	 
+}
+
+.work-inactive {
+	@include transform(translateX(30%));
+}
+
+.work-item {
+	
+}
+
+
+@include keyframes(work-ani) {
+    0%   { @include transform(scale(1));	 }
+    100% { @include transform(scale(1.05));	 }
+}
+
+.work-header{
+	.header-content{
+		display: none;
+	}
+	@include transition(all 2s ease)
+	&.active{
+		@include animation-name(work-ani);
+	    @include animation-duration(2s);
+	    @include animation-delay(0ms);
+	    @include animation-timing-function(ease);
+	    @include animation-iteration-count(once);
+	    @include animation-fill-mode(forwards);
+
+	}
+
+}
+
+.work-footer{
+	position: relative;
+	width: 100%;
+	height: 700px;
+	display: block;
+	top: 1px;
+	z-index: 50;
+	background: white;
+
+	// Only fix I could think of :(
+	&:before{
+		position: absolute;
+		height: 1px;
+		content: "";
+		width: 100%;
+		top: -1px;
+		background-color: white;
+	}
+}
+
+
+.work--content-bottomline {
+	height: 1px;
+	position: relative;
+	top: -1px;
+
+	@media #{$phonel} {	
+		display: none;
+	}
+}
+
+

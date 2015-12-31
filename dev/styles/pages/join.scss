@@ -1,0 +1,289 @@
+// Join us ======================
+
+.join-wrap{
+	background-color: white;
+	position: relative;
+	width: 100%;
+	z-index: 50;
+	padding-top: 90px;
+	padding-bottom: 120px;
+}
+
+.join-text {
+	float: right;
+	width: 66%;
+	display: inline-block;
+}
+
+.join-headers {
+	float: left;
+	width: 10%;
+	display: inline-block;
+}
+
+// Intro
+
+.join--intro {
+	overflow: hidden;
+	margin: 10px auto 70px auto;
+	h3{
+		font-size: 24px;
+		line-height: 34px;
+	}
+}
+
+
+// Opportunities 
+
+.join--opportunities {
+	overflow: hidden;
+	margin: 20px auto 30px auto;
+	p{
+		line-height: 30px;
+	}
+}
+
+.jobs {
+	width: 100%;
+	position: relative;
+	display: block;
+	list-style: none;
+	margin: 20px 0;
+}
+
+.job {
+	width: 100%;
+	max-height: 143px;
+	position: relative;
+	display: block;
+	border-top: 1px solid #dddddd;
+	overflow: hidden;
+	@include transition(all 700ms ease);
+
+	&:last-child {
+		border-bottom: 1px solid #dddddd;
+	}
+
+	&.active{
+		@include transition(all 1300ms ease);
+		max-height: 1000px;
+
+		.job-plus--line-v {
+			height: 0;
+		}
+	}
+}
+
+.job-lead {
+	padding: 40px 0;
+	width: 100%;
+	display: block;
+	float: left;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.job-icon {
+	width: 84px;
+	display: block;
+	float: left;
+	img{
+		margin-top: 3px;
+		height: 56px;
+		width: auto;
+	}
+}
+
+.job-name {
+	width: 70%;
+	display: block;
+	float: left;
+	padding-left: 0px;
+	h3{
+		line-height: 36px;
+	}
+	p{
+		color: #999999;
+	}
+}
+
+.job-plus {
+	float: right;
+	display: block;
+	margin-top: 13px;
+	width: 36px;
+	height: 36px;
+	position: relative;
+	//background: pink;
+}
+
+.job-plus--line-h {
+	background: #999999;
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	height: 1px;
+}
+
+.job-plus--line-v {
+	background: #999999;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	left: 50%;
+	height: 100%;
+	width: 1px;
+	@include transition(all 800ms cubic-bezier(0.19, 1, 0.22, 1));
+}
+
+.job-description {
+	width: 100%;
+	padding-bottom: 30px;
+}
+
+// Our Studios
+
+.join--studios {
+	overflow: hidden;
+	margin: 20px auto 30px auto;
+	cursor: pointer;
+}
+
+.studios-title {
+	max-width: 500px;
+	margin-bottom: 50px;
+}
+
+.studio-wrap {
+	width: 100%;
+	position: relative;
+	height: 253px;
+	overflow: hidden;
+	margin-bottom: 30px;
+
+	.image-full{
+		@include transition(all 1.5s ease);
+	}
+
+	&:hover {
+		.studio-name {
+			background: white;
+			color: $off-black;
+		}
+		.studio-wrap-overlay{
+			background-color: rgba(0,0,0,0);
+		}
+		.image-full{
+			@include transform(scale(1.05)); 
+		}
+		
+	}
+
+	&.active{
+		.studio-lightbox{
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			z-index: 200;
+
+			.studio-gallery{
+				@include transform(translateX(30%));
+			}
+
+			.studio-lightbox--description{
+				@include transition(all 1s 1s ease)
+				@include transform(translateX(0%))
+			}
+			.studio-lightbox--close{
+				display: block;
+			}
+		}
+	}
+}
+
+//pop up
+
+.studio-lightbox{
+	position: absolute;
+	@include transition(all 2s ease);
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+
+}
+
+.studio-lightbox--gallery{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.studio-lightbox--description{
+	width: 50%;
+	position: absolute;
+	background: white;
+	top: 0;
+	left: 0;
+	height: 100%;
+	@include transition(all 300ms ease);
+	@include transform(translateX(-100%));
+}
+
+.studio-lightbox--content{
+	@extend .absolute-center;
+	height: 230px;
+	width: 70%;
+	max-width: 600px;
+}
+
+.studio-lightbox--close{
+	width: 100px;
+	height: 100px;
+	top: 0;
+	left: 200px;
+	position: fixed;
+	z-index: 500;
+	background: red;
+	display: none;
+}
+
+//
+
+.studio-wrap-overlay {
+	background-color: rgba(0,0,0,0.2);
+	@include transition(all 1s ease);
+}
+
+.studio-name-wrap {
+	@extend .absolute-v-center;
+	height: 40px;
+	text-align: center;
+	width: 100%;
+	//left: 0;
+}
+
+.studio-name {
+	border: 1px solid white;
+	color: white;
+	text-align: center;
+	display: inline-block;
+	padding: 8px 24px;
+	//font-size: 18px;
+	@include transition(all 400ms ease);
+}
+
+
+
+// Graduates
+
+.join--graduates {
+	overflow: hidden;
+	margin: 120px auto 0px auto;
+	h2 {
+		margin-bottom: 30px;
+	}
+}

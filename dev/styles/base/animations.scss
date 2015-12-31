@@ -1,0 +1,59 @@
+// Animations ==================
+
+// Fades
+
+@include keyframes(fade-ani) {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.fade{
+    @include animation-name(fade-ani);
+    @include animation-duration(.6s);
+    @include animation-delay(0ms);
+    @include animation-timing-function(ease);
+    @include animation-iteration-count(once);
+    @include animation-fill-mode(backwards);
+}
+
+@include keyframes(fade-up) {
+    0%   { @include transform(translateY(20px)); opacity:0; }
+    100% { @include transform(translateY(0px));  opacity:1; }
+}
+
+.fade-up{
+    @include animation-name(fade-up);
+    @include animation-duration(2s);
+    @include animation-delay(0ms);
+    @include animation-timing-function(cubic-bezier(0.19, 1, 0.22, 1));
+    @include animation-iteration-count(once);
+    @include animation-fill-mode(backwards);
+}
+
+.fade-up-delay-1{
+    @include animation-name(fade-up);
+    @include animation-duration(2s);
+    @include animation-delay(300ms);
+    @include animation-timing-function(cubic-bezier(0.19, 1, 0.22, 1));
+    @include animation-iteration-count(once);
+    @include animation-fill-mode(backwards);
+}
+
+.fade-up-delay-2{
+    @include animation-name(fade-up);
+    @include animation-duration(2s);
+    @include animation-delay(600ms);
+    @include animation-timing-function(cubic-bezier(0.19, 1, 0.22, 1));
+    @include animation-iteration-count(once);
+    @include animation-fill-mode(backwards);
+}
+
+.fade-up-delay-3{
+    @include animation-name(fade-up);
+    @include animation-duration(2s);
+    @include animation-delay(900ms);
+    @include animation-timing-function(cubic-bezier(0.19, 1, 0.22, 1));
+    @include animation-iteration-count(once);
+    @include animation-fill-mode(backwards);
+}
+
