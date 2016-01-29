@@ -1,0 +1,19 @@
+{
+  "name": "ReactBoilerplate",
+  "description": "React Boilerplate",
+  "main": "build/index.php",
+  "authors": [
+    "Ever & Ever"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
