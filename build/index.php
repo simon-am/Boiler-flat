@@ -7,9 +7,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <!-- Title should have 50-70 characters, important keywords near the beginning -->
-        <title>Checkland Kindleysides</title> 
+        <title>Title</title> 
         <!-- Description must be under 150 characters -->
-        <meta name="description" content="Checkland"> 
+        <meta name="description" content="Description of site"> 
         <meta name="keywords" content="keyword1, keyword2">
         <!-- Open Graph data -->
         <meta property="og:title" content="Your Title Here" />
