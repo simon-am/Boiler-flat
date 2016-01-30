@@ -46,7 +46,7 @@
     <body>
         
 
-
+        <h1>Flat boiler plate</h1>
         
         <script src="/scripts/main.js"></script>
     </body>
