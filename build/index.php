@@ -44,7 +44,10 @@
         </noscript>
     </head>
     <body>
-        <div id="react-container" class=""></div>
+        
+
+
+        
         <script src="/scripts/main.js"></script>
     </body>
 </html>

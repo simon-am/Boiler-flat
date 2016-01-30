@@ -1,4 +1,11 @@
-# Ever & Ever React.js Boilerplate
+# Ever & Ever Flat Boilerplate
+
+Replicates development folder structure for dynamic products. <br>
+
+## Features
+**Gulp** <br>
+**Styles** - SASS with Bourbon <br>
+**Scripts** - Need copy it manually in build for now <br>
 
 
 ## System Requirements
@@ -8,12 +15,13 @@
 
 ## Local Setup
 
-Set up **local.example.com** to point to **/build** in MAMP or similar
+Set up **local.example.com** to point to **/build** in MAMP or similar<br>
+Manually create a bower_compontents folder in root.<br>
 
 Get the latest version of the code:
 
 ```console
-$ git clone git@bitbucket.org:everandever/react-boilerplate.git
+$ git clone git@bitbucket.org:everandever/flat-boilerplate.git
 $ cd react-boilerplate/
 ```
 
