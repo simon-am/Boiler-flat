@@ -19,21 +19,22 @@ $menu-width: 380px;
 
 // Responsive ===========
 $phone: "only screen and (max-width: 400px)";
-$phonel: "only screen and (max-width: 580px)";
+$phonel: "only screen and (max-width: 670px)";
 $tabletp: "only screen and (max-width: 768px)";
 $tabletl: "only screen and (max-width: 1024px)";
 $laptop: "only screen and (max-width: 1240px)";
-$desktop: "only screen and (max-width: 1640px)";
+$desktop: "only screen and (max-width: 1440px)";
 
 
 // Clips ================ 
 /*
 
-@media #{$phone} {	
+@media #{$phonel} {	
 
 }
 
-@include transition(all 800ms cubic-bezier(0.19, 1, 0.22, 1));
+@include transition(all .2s ease);
+@include transition(all .8s cubic-bezier(0.19, 1, 0.22, 1));
 @include transform(translateX(50%)); 
 
 -webkit-font-smoothing: antialiased;

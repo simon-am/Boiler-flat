@@ -20,7 +20,7 @@
     top: 0;
 }
 
-.absolute-center {
+.center {
     position: absolute;
     left: 0;
     right: 0;
@@ -29,14 +29,14 @@
     margin: auto;
 }
 
-.absolute-h-center {
+.horizontal-center {
     position: absolute;
     left: 0;
     right: 0;
     margin: auto;
 }
 
-.absolute-v-center {
+.vertical-center {
     position: absolute;
     top: 0;
     bottom: 0;
