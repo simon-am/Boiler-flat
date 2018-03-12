@@ -1,3 +1,6 @@
+# THIS IS NOW DEAD AND IS IN THE NEW GITLAB
+
+
 # Ever & Ever Flat Boilerplate
 
 Replicates development folder structure for dynamic products. <br>
